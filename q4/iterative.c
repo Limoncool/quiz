@@ -23,7 +23,7 @@ while (fscanf (input, "%c", &temp) != EOF) {
 	if (temp == '-') {
 		minus = 1;
 	}
-	else if (temp != '[' && temp != ']' && temp != ',') {
+	else if (temp != '[' && temp != ']' && temp != ',' && temp != '\n') {
 		switch (minus) {
 			case 0:
 				Atemp[a] = (int) (temp - '0');

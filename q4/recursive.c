@@ -33,7 +33,7 @@ while (fscanf (input, "%c", &temp) != EOF) {
 	if (temp == '-') {
 		minus = 1;
 	}
-	else if (temp != '[' && temp != ']' && temp != ',') {
+	else if (temp != '[' && temp != ']' && temp != ',' && temp != '\n') {
 		switch (minus) {
 			case 0:
 				A[a] = (int) (temp - '0');
@@ -71,6 +71,7 @@ int MaxSubArray () {
 max_pointer += A[a];
 if (max_pointer < 0) {
 	max_pointer = 0;
+	on = 0;
 }
 	
 if (on == 0 && max_pointer > 0) {
